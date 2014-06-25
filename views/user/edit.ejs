@@ -1,0 +1,29 @@
+<form action="/user/update/<%= user.id %>" method="POST" class="form-signin">
+	<h2> you're editing a Entry... </h2>
+
+    <div class="control-group">
+    <input value="<%= user.name %>" type="text" class="form-control" name="name">
+    </div>
+
+    <div class="control-group">
+    <input value="<%= user.email %>" type="text" class="form-control" name="email">
+    </div>
+
+    <br />
+    <br />
+
+    <% _.each(masters, function(master) { %>
+    <div class="control-group">
+        <label><%= master.name %></label>
+        <select name="bet_<%= master.code %>" id="bet_<%= master.code %>" class="form-control" select_val="<%= user.bet[master.code] %>">
+        </select>
+    </div>
+    <% }) %>
+
+    <br />
+
+	<input type="submit" value="Proceed" class="btn btn-lg btn-primary btn-block"/>
+    <input type="hidden" name="_csrf" value="<%= _csrf %>" />
+    <input type="hidden" name="bet" id="bet" value="" />
+
+</form>

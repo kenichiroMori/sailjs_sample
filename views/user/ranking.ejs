@@ -1,0 +1,19 @@
+<div class="container">
+	<h3>Ranking</h3>
+	<table class='table'>
+		<tr>
+			<th>Rank</th>
+			<th>Name</th>
+			<th>Score</th>
+		</tr>
+
+		<% _.each(rankings, function(ranking) { %>
+		<tr data-id="<%= ranking.rank %>" data-model="ranking">
+			<td><%= ranking.rank %></td>
+			<td><%= ranking.name %></td>
+			<td><b><%= ranking.score %></b> point</td>
+		</tr> 
+
+		<% }) %>
+	</table>
+</div>

@@ -1,0 +1,15 @@
+<div class='container'>
+	<h1><%= user.name %> </h1>
+	<h3><%= user.email %> </h3>
+	<hr>
+	<h3>bet</h3>
+    <table class='table' style='width: 50%'>
+    <% _.each(masters, function(master) { %>
+    <tr>
+        <td><%= master.name %></td>
+        <td><%= user.bet[master.code] %></td>
+    </tr>
+    <% }) %>
+    </table>
+	<a class="btn btn-medium btn-primary" href="/user/edit/<%= user.id %>">Edit</a>
+</div>
