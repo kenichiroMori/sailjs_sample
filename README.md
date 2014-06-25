@@ -6,7 +6,12 @@ root cmd :
 # yum nodejs/npm 
 rpm -ivh http://ftp.riken.jp/Linux/fedora/epel/6/x86_64/epel-release-6-8.noarch.rpm
 yum install -y nodejs npm --enablerepo=epel
+
+# yum git 
 yum install -y git
+
+# yum sailsjs 
+npm -g install sails
 
 # postgres simple install
 wget http://ftp.postgresql.org/pub/source/v9.3.3/postgresql-9.3.3.tar.gz
