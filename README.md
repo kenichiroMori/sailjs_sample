@@ -1,2 +1,2 @@
-sailjs_sample
+sailsjs_sample
 =============
