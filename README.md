@@ -2,7 +2,7 @@ sailsjs_sample
 =============
 
 root cmd : 
-```
+```bash
 # yum nodejs/npm 
 rpm -ivh http://ftp.riken.jp/Linux/fedora/epel/6/x86_64/epel-release-6-8.noarch.rpm
 yum install -y nodejs npm --enablerepo=epel
@@ -32,7 +32,7 @@ chmod 777 /var/log/
 
 postgres cmd :
 
-```
+```bash
 initdb /usr/local/pgsql/data
 pg_ctl -w start -D /usr/local/pgsql/data -l /var/log/postgres.log
 createdb toto
@@ -118,7 +118,7 @@ FROM (
 ```
 
 user edit 
-```
+```bash
 git clone https://github.com/kenichiroMori/sailsjs_sample.git
 sails new toto
 cd toto
