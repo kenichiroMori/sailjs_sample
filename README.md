@@ -19,7 +19,6 @@ yum -y install readline-devel zlib-devel bison flex openssl-devel
 gunzip postgresql-9.3.3.tar.gz
 tar xf postgresql-9.3.3.tar
 cd postgresql-9.3.3
-cd postgresql-9.3.3
 ./configure \
      --prefix=/usr/local/postgresql-9.3.3 \
      --with-openssl
