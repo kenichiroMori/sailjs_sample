@@ -18,9 +18,11 @@ wget http://ftp.postgresql.org/pub/source/v9.3.3/postgresql-9.3.3.tar.gz
 yum -y install readline-devel zlib-devel bison flex openssl-devel
 gunzip postgresql-9.3.3.tar.gz
 tar xf postgresql-9.3.3.tar
-cd postgresql-9.3.3cd postgresql-9.3.3
 cd postgresql-9.3.3
-./configure      --prefix=/usr/local/postgresql-9.3.3      --with-openssl
+cd postgresql-9.3.3
+./configure \
+     --prefix=/usr/local/postgresql-9.3.3 \
+     --with-openssl
 gmake && gmake install
 ln -s /usr/local/postgresql-9.3.3 /usr/local/pgsql
 adduser postgres
@@ -48,6 +50,7 @@ psql toto
 
 DB migration :
 ```SQL
+-- insert initial data for master
 INSERT INTO master VALUES ('E1', 'Group E 1位', 9, '2014-06-23 11:09:59.627047+09', '2014-06-23 11:09:59.627047+09');
 INSERT INTO master VALUES ('E2', 'Group E 2位', 10, '2014-06-23 11:09:59.630689+09', '2014-06-23 11:09:59.630689+09');
 INSERT INTO master VALUES ('F2', 'Group F 2位', 12, '2014-06-23 11:09:59.637687+09', '2014-06-23 11:09:59.637687+09');
@@ -130,6 +133,6 @@ cd toto
 cp -pr ../sailsjs_sample/* .
 npm install
 
-vi custom.js
+vi custom.js (edit ajax url)
 sails lift > /tmp/sails.log &
 
